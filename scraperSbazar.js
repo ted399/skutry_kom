@@ -47,7 +47,10 @@ async function scraperSbazar() {
     }
 
 }
-const browser = await puppeteer.launch();
+
+const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
 
 const url = "https://www.sbazar.cz/87-skutry/cena-neomezena/nejnovejsi/nejnovejsi/1";
 
