@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-module.exports = scraperSbazar();
+module.exports = scraperSbazar().listen(process.env.PORT || 8080);
 
 //scrape data
 async function scraperSbazar() {
