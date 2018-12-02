@@ -9,7 +9,7 @@ const app = express();
 express().listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 app.use(express.static('public'));
-app.get('*', (request, response) => {
+app.get('/', (request, response) => {
 response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
