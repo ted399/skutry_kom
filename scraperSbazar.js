@@ -49,7 +49,7 @@ async function scraperSbazar() {
 }
 const browser = await puppeteer.launch();
 
-const url = "https://www.sbazar.cz/87-skutry/cena-neomezena/nejnovejsi/nejnovejsi/17";
+const url = "https://www.sbazar.cz/87-skutry/cena-neomezena/nejnovejsi/nejnovejsi/1";
 
 
 const offers = await getOffers(url);

@@ -50,7 +50,7 @@ async function scraperBazos() {
 }
 const browser = await puppeteer.launch();
 
-const url = "https://motorky.bazos.cz/skutry/2350/";
+const url = "https://motorky.bazos.cz/skutry/0/";
 
 
 const offers = await getOffers(url);
