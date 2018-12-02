@@ -173,12 +173,14 @@ a.hit-link:after {
     font-size: 20px;
 }
 
-.ais-hits__empty {
+.ais-hits__empty, .ais-infinite-hits__empty {
     text-align: center;
     font-size: 18px;
     color: #fff;
     font-weight: bold;
 }
+
+
 
 .ais-pagination {
     text-align: center;
@@ -202,4 +204,29 @@ a.hit-link:after {
 
 .ais-pagination--item__next, .ais-pagination--item__last, .ais-pagination--item__previous, .ais-pagination--item__first a {
     text-decoration: none;
+}
+
+.ais-infinite-hits--showmore {
+    text-align: center;
+}
+
+.ais-infinite-hits--showmore > button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: bold;
+    transition: all .15s ease-in;
+    margin: 30px 0 50px 0;
+}
+
+.ais-infinite-hits--showmore > button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.ais-infinite-hits--showmore > button:disabled {
+    display: none;
 }

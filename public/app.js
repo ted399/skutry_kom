@@ -19,6 +19,7 @@ search.addWidget(
             item: document.getElementById('hit-template').innerHTML,
             empty: "Takový skůtr jsme nenašli :("
         },
+        showMoreLabel: 'Další skůtry',
         escapeHits: true
     })
 );
