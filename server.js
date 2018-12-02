@@ -4,12 +4,13 @@ const firebase = require('firebase');
 const express = require('express')
 const path = require('path');
 const PORT = process.env.PORT || 5000
+const app = express();
 
 express().listen(PORT, () => console.log(`Listening on ${ PORT }`))
-express().use(express.static(path.join(__dirname, 'public')));
 
-express().get('/', function(req, res){
-res.sendFile('../index.html');
+app.use(express.static('public'));
+app.get('*', (request, response) => {
+response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // load values from the .env file in this directory into process.env
