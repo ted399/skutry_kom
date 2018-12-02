@@ -75,6 +75,8 @@ const index = algolia.initIndex(process.env.ALGOLIA_INDEX_NAME);
           records.push(childData);
         });
 
+
+
         // Add or update new objects
         index
           .saveObjects(records)
