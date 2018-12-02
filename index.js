@@ -42,7 +42,7 @@ const index = algolia.initIndex(process.env.ALGOLIA_INDEX_NAME);
           }
         }
 
-        console.log(result);
+        //console.log(result);
         return result;
       };
 
@@ -59,7 +59,7 @@ const index = algolia.initIndex(process.env.ALGOLIA_INDEX_NAME);
 
       //Algolia
       //Delete all the data from an Index
-      index.clearIndex()
+      await index.clearIndex()
 
       // Get all contacts from Firebase
       database.ref('/skutry_novy').once('value', contacts => {
@@ -80,6 +80,7 @@ const index = algolia.initIndex(process.env.ALGOLIA_INDEX_NAME);
           .saveObjects(records)
           .then(() => {
             console.log('Contacts imported into Algolia');
+            process.exit();
           })
           .catch(error => {
             console.error('Error when importing contact into Algolia', error);
@@ -87,6 +88,4 @@ const index = algolia.initIndex(process.env.ALGOLIA_INDEX_NAME);
           });
       });
 
-
-     process.exit()
     })();
