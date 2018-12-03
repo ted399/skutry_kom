@@ -8,7 +8,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/scrape', function(req, res) {
+app.get('/scraper', function(req, res) {
     scrape();
 });
 
