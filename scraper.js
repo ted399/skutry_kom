@@ -1,4 +1,3 @@
-function scrape(){
   const algoliasearch = require('algoliasearch');
   const dotenv = require('dotenv');
   const firebase = require('firebase');
@@ -19,7 +18,9 @@ function scrape(){
   );
   const index = algolia.initIndex(process.env.ALGOLIA_INDEX_NAME);
 
+  module.exports = scrape();
 
+  function scrape(){
       //add both Scrapers
       const scraperBazos = require('./scraperBazos.js');
       const scraperSbazar = require('./scraperSbazar.js');
